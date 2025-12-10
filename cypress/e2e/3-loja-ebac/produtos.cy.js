@@ -1,18 +1,18 @@
-/// <reference types="cypress"/>
+///<reference types="cypress"/>
 
-describe("Funcionalidade: Produtos", () => {});
 describe("Funcionalidade: Produtos", () => {
   beforeEach(() => {
-    cy.visit("http://lojaebac.ebaconline.art.br/produtos/");
+    cy.visit("produtos");
   });
-});
-it("Deve selecionar um produto da lista", () => {
-  cy.get(".products > .row")
-    //.first()
-    //.last()
-    //.eq(2)
-    .contains("Frankie Sweatshirt")
-    .click();
 
-  cy.get("#tab-title-description > a").should("contain", "Descrição");
+  it("Deve selecionar um produto da lista", () => {
+    cy.get(".products > .row")
+      // .first()
+      // .last()
+      // .eq(2)
+      .contains("Frankie Sweatshirt")
+      .click();
+
+    cy.get("#tab-title-description > a").should("contain", "Descrição");
+  });
 });
